@@ -21,15 +21,16 @@ public class FactoryWorkerSystem : MonoBehaviour {
         _target = finderScript.CalculateNearest(this.transform, BurningBinManager.Books);
 
         if (_target != null)
-        Debug.Log("Nearest Book is at" + _target.position);
+            Debug.DrawLine(this.transform.position, _target.position, Color.red);
+        //Debug.Log("Nearest Book is at" + _target.position);
     }
 
     void SeekBin()
     {
         _target = finderScript.CalculateNearest(this.transform, BurningBinManager.BurningBins);
         if (_target != null)
-
-            Debug.Log("Nearest Bin is at" + _target.position);
+            Debug.DrawLine(this.transform.position, _target.position, Color.green);
+        //Debug.Log("Nearest Bin is at" + _target.position);
     }
 
 }

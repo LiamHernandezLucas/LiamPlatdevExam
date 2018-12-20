@@ -10,4 +10,9 @@ public class BookBehaviour : MonoBehaviour {
     {
         BurningBinManager.Books.Add(this.gameObject.transform);
     }
+
+    private void OnDestroy()
+    {
+        BurningBinManager.Books.Remove(this.gameObject.transform);
+    }
 }
